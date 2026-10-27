@@ -1,244 +1,429 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Política de Privacidad — SENT-IA</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background-color: #f4f7ff;
-        color: #2a4a6a;
-        padding: 32px 16px;
-        line-height: 1.7;
-      }
-      .page {
-        max-width: 720px;
-        margin: 0 auto;
-        background: white;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-      }
-      .header {
-        background: linear-gradient(135deg, #5b9fd4, #9b7fd4);
-        padding: 40px 32px;
-        text-align: center;
-      }
-      .logo {
-        font-size: 28px;
-        font-weight: 800;
-        color: white;
-        letter-spacing: 4px;
-        margin-bottom: 8px;
-      }
-      .header-sub {
-        font-size: 14px;
-        color: rgba(255, 255, 255, 0.85);
-      }
-      .content {
-        padding: 40px 32px;
-      }
-      .titulo-principal {
-        font-size: 22px;
-        font-weight: 700;
-        color: #2a4a6a;
-        margin-bottom: 8px;
-      }
-      .fecha {
-        font-size: 13px;
-        color: #7a8fa0;
-        margin-bottom: 32px;
-        padding-bottom: 24px;
-        border-bottom: 1px solid #d4eaff;
-      }
-      h2 {
-        font-size: 16px;
-        font-weight: 700;
-        color: #5b9fd4;
-        margin-top: 28px;
-        margin-bottom: 10px;
-      }
-      p {
-        font-size: 14px;
-        color: #2a4a6a;
-        margin-bottom: 12px;
-      }
-      ul {
-        padding-left: 20px;
-        margin-bottom: 12px;
-      }
-      ul li {
-        font-size: 14px;
-        color: #2a4a6a;
-        margin-bottom: 6px;
-      }
-      .highlight-box {
-        background-color: #f4f7ff;
-        border-left: 4px solid #5b9fd4;
-        border-radius: 8px;
-        padding: 16px 20px;
-        margin: 16px 0;
-        font-size: 14px;
-      }
-      .footer {
-        background-color: #f4f7ff;
-        padding: 24px 32px;
-        text-align: center;
-        border-top: 1px solid #d4eaff;
-        font-size: 12px;
-        color: #7a8fa0;
-        line-height: 1.8;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="page">
-      <div class="header">
-        <div class="logo">SENT-IA</div>
-        <div class="header-sub">
-          Sistema de Seguimiento Emocional Estudiantil
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Política de privacidad de SENT-IA.">
+  <title>SENT-IA — Política de privacidad</title>
+  <style>
+    :root {
+      --primary: #5b9fd4;
+      --secondary: #9b7fd4;
+      --text: #2a4a6a;
+      --muted: #61758b;
+      --background: #f4f7ff;
+      --border: #e1e8f4;
+      --soft-blue: #edf6ff;
+      --soft-purple: #f4efff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      padding: 32px 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--background);
+    }
+
+    .container { max-width: 920px; margin: 0 auto; }
+
+    .hero {
+      text-align: center;
+      padding: 38px 24px;
+      border-radius: 24px;
+      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      margin-bottom: 22px;
+    }
+
+    .brand {
+      display: inline-block;
+      font-weight: 800;
+      letter-spacing: .08em;
+      padding: 6px 12px;
+      border: 1px solid rgba(255,255,255,.6);
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+
+    .hero p { max-width: 700px; margin: 0 auto; }
+    .updated { margin-top: 14px !important; font-size: .92rem; }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 20px;
+      align-items: start;
+    }
+
+    nav, .section {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 5px 18px rgba(47,75,116,.045);
+    }
+
+    nav { padding: 18px; position: sticky; top: 16px; }
+    nav h2 { font-size: 1rem; margin: 0 0 10px; color: #367eb7; }
+    nav a {
+      display: block;
+      font-size: .9rem;
+      color: var(--text);
+      text-decoration: none;
+      padding: 5px 0;
+    }
+    nav a:hover { color: #367eb7; text-decoration: underline; }
+
+    .content { min-width: 0; }
+    .section {
+      padding: clamp(20px, 3vw, 30px);
+      margin-bottom: 18px;
+      scroll-margin-top: 18px;
+    }
+
+    h2 { color: #367eb7; font-size: 1.35rem; line-height: 1.35; margin: 0 0 12px; }
+    h3 { color: var(--secondary); font-size: 1.08rem; margin: 22px 0 8px; }
+    p { margin: 10px 0; }
+    li { margin: 7px 0; }
+    ul, ol { padding-left: 24px; }
+    a { color: #367eb7; overflow-wrap: anywhere; }
+
+    .notice {
+      background: var(--soft-blue);
+      border-left: 4px solid var(--primary);
+      padding: 15px 17px;
+      border-radius: 10px;
+      margin: 16px 0;
+    }
+
+    .notice.purple {
+      background: var(--soft-purple);
+      border-left-color: var(--secondary);
+    }
+
+    .small { color: var(--muted); font-size: .92rem; }
+    footer { text-align: center; padding: 22px 8px; color: var(--muted); font-size: .9rem; }
+
+    @media (max-width: 760px) {
+      body { padding: 18px 12px; }
+      .hero { padding: 28px 18px; }
+      .layout { grid-template-columns: 1fr; }
+      nav { position: static; }
+      nav .links { columns: 2; column-gap: 18px; }
+    }
+
+    @media (max-width: 460px) {
+      nav .links { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div class="brand">SENT-IA</div>
+      <h1>Política de privacidad</h1>
+      <p>
+        Conoce cómo se recopilan, utilizan, almacenan y protegen los datos
+        personales tratados por SENT-IA.
+      </p>
+      <p class="updated">Última actualización: 27 de octubre de 2026</p>
+    </header>
+
+    <div class="layout">
+      <nav aria-label="Contenido de la política">
+        <h2>Contenido</h2>
+        <div class="links">
+          <a href="#responsable">1. Responsable</a>
+          <a href="#finalidad">2. Finalidad</a>
+          <a href="#datos">3. Datos tratados</a>
+          <a href="#menores">4. Menores de edad</a>
+          <a href="#ia">5. Inteligencia artificial</a>
+          <a href="#acceso">6. Acceso a los datos</a>
+          <a href="#proveedores">7. Proveedores</a>
+          <a href="#seguridad">8. Seguridad</a>
+          <a href="#conservacion">9. Conservación</a>
+          <a href="#derechos">10. Derechos</a>
+          <a href="#eliminacion">11. Eliminación</a>
+          <a href="#cambios">12. Cambios</a>
         </div>
-      </div>
+      </nav>
 
       <div class="content">
-        <div class="titulo-principal">Política de Privacidad</div>
-        <div class="fecha">Última actualización: octubre de 2026</div>
+        <section class="section" id="responsable">
+          <h2>1. Responsable del tratamiento</h2>
+          <p>
+            La <strong>Institución Educativa Técnica Industrial Rafael Navia Varón</strong>,
+            ubicada en Cali, Colombia, es la responsable del tratamiento de los
+            datos personales gestionados mediante SENT-IA.
+          </p>
+          <p>
+            Para consultas, solicitudes o reclamaciones relacionadas con los datos,
+            escribe a
+            <a href="mailto:adoppi2807@gmail.com">adoppi2807@gmail.com</a>.
+          </p>
+        </section>
 
-        <p>
-          Esta Política de Privacidad describe cómo SENT-IA recopila, usa y
-          protege la información personal de los usuarios de la aplicación
-          móvil, desarrollada para la Institución Educativa Técnica Industrial
-          Rafael Navia Varón.
-        </p>
+        <section class="section" id="finalidad">
+          <h2>2. Finalidad de SENT-IA</h2>
+          <p>
+            SENT-IA es una herramienta de apoyo educativo en la que los estudiantes
+            responden situaciones hipotéticas relacionadas con el bienestar emocional.
+            También pueden registrar, de forma opcional, cómo se sienten en el día.
+          </p>
+          <p>
+            La aplicación procesa las respuestas para generar indicadores por tema
+            y resúmenes orientativos que pueden servir como material de apoyo para
+            los docentes orientadores y el acompañamiento pedagógico.
+          </p>
+          <div class="notice purple">
+            <strong>SENT-IA no realiza diagnósticos clínicos.</strong>
+            Los análisis generados mediante inteligencia artificial son orientativos
+            y no sustituyen la valoración de profesionales competentes.
+          </div>
+        </section>
 
-        <h2>1. Información que recopilamos</h2>
-        <p>La aplicación recopila los siguientes datos:</p>
-        <ul>
-          <li>Nombre completo y correo electrónico institucional.</li>
-          <li>Foto de perfil (opcional, proporcionada por el usuario).</li>
-          <li>Grado e institución educativa.</li>
-          <li>
-            Respuestas a situaciones hipotéticas semanales y tiempo de
-            respuesta.
-          </li>
-          <li>
-            Registro emocional diario voluntario (selección de estado de ánimo).
-          </li>
-        </ul>
+        <section class="section" id="datos">
+          <h2>3. ¿Qué datos se tratan?</h2>
+          <p>Según las funciones utilizadas, SENT-IA puede tratar las siguientes categorías:</p>
+          <ul>
+            <li><strong>Datos de cuenta:</strong> nombre completo, correo electrónico institucional e identificadores necesarios para gestionar la cuenta.</li>
+            <li><strong>Datos escolares:</strong> grado y otra información escolar necesaria para el funcionamiento de la aplicación.</li>
+            <li><strong>Foto de perfil:</strong> si el estudiante decide proporcionarla.</li>
+            <li><strong>Respuestas educativas:</strong> respuestas a situaciones hipotéticas y datos técnicos asociados al registro de esas respuestas, cuando corresponda.</li>
+            <li><strong>Estado de ánimo:</strong> selección diaria voluntaria sobre cómo se siente el estudiante.</li>
+            <li><strong>Datos derivados:</strong> indicadores de bienestar por tema y resúmenes pedagógicos generados mediante inteligencia artificial.</li>
+          </ul>
+          <p>
+            Las respuestas y los registros relacionados con el bienestar pueden revelar
+            o permitir inferir información delicada sobre una persona. Por ello, se
+            tratan con especial cuidado, acceso restringido y únicamente para las
+            finalidades informadas.
+          </p>
+          <p>El registro diario del estado de ánimo es opcional.</p>
+        </section>
 
-        <h2>2. Cómo usamos la información</h2>
-        <p>Los datos recopilados se usan exclusivamente para:</p>
-        <ul>
-          <li>Generar indicadores de bienestar emocional por área temática.</li>
-          <li>
-            Producir análisis orientativos para los docentes orientadores.
-          </li>
-          <li>
-            Identificar estudiantes que puedan requerir acompañamiento
-            pedagógico.
-          </li>
-          <li>Personalizar la experiencia dentro de la aplicación.</li>
-        </ul>
+        <section class="section" id="menores">
+          <h2>4. Protección de menores de edad</h2>
+          <p>
+            SENT-IA puede ser utilizada por estudiantes menores de edad. La institución
+            informa que gestiona el procedimiento de autorización de padres, madres,
+            acudientes o representantes legales que corresponda.
+          </p>
+          <p>
+            El tratamiento debe respetar el interés superior de niños, niñas y
+            adolescentes, sus derechos fundamentales y las normas de protección de
+            datos personales aplicables en Colombia.
+          </p>
+          <p>
+            El estudiante o su representante legal, según corresponda, puede presentar
+            solicitudes relacionadas con los datos. La institución podrá verificar
+            la identidad y la representación antes de entregar información o ejecutar
+            una solicitud.
+          </p>
+        </section>
 
-        <div class="highlight-box">
-          La información nunca será compartida con terceros, utilizada con fines
-          comerciales ni publicada de forma que permita identificar a un
-          estudiante específico.
-        </div>
+        <section class="section" id="ia">
+          <h2>5. Uso de inteligencia artificial</h2>
+          <p>
+            SENT-IA utiliza un servicio de inteligencia artificial de NVIDIA para
+            analizar las respuestas a situaciones hipotéticas y generar resúmenes
+            orientativos. Según la información suministrada para esta política,
+            se envían las respuestas necesarias para el análisis, sin incluir
+            deliberadamente el nombre ni el correo electrónico del estudiante
+            en esa solicitud.
+          </p>
+          <p>
+            La institución indica que ha verificado las condiciones aplicables al
+            servicio utilizado y que los datos enviados no se conservan para
+            entrenamiento ni para usos ajenos al servicio. Esta información debe
+            revisarse si cambia el proveedor, la configuración o las condiciones
+            del servicio.
+          </p>
+          <ul>
+            <li>Los resultados son material de apoyo pedagógico.</li>
+            <li>No constituyen diagnósticos clínicos.</li>
+            <li>No deben ser la única base para decisiones que afecten significativamente al estudiante.</li>
+            <li>Los resultados requieren interpretación humana dentro de la finalidad educativa informada.</li>
+          </ul>
+        </section>
 
-        <h2>3. Privacidad y confidencialidad</h2>
-        <p>
-          Las respuestas individuales de los estudiantes son estrictamente
-          confidenciales. Los docentes únicamente tienen acceso a los
-          indicadores calculados y al resumen generado por inteligencia
-          artificial — nunca a las respuestas exactas del estudiante. Los
-          estudiantes no pueden ver sus propios indicadores ni las observaciones
-          que los docentes realicen sobre ellos.
-        </p>
+        <section class="section" id="acceso">
+          <h2>6. Acceso y uso de los datos</h2>
+          <p>
+            De acuerdo con la información proporcionada, los docentes orientadores
+            autorizados pueden consultar indicadores de bienestar y resúmenes
+            generados por inteligencia artificial, pero no las respuestas exactas
+            registradas por los estudiantes.
+          </p>
+          <p>
+            Los estudiantes no disponen actualmente de una función en la aplicación
+            para consultar sus respuestas o los indicadores generados. Pueden
+            solicitar acceso a sus datos personales por correo electrónico,
+            sujeto a la verificación correspondiente.
+          </p>
+          <p>
+            El acceso debe limitarse a personas autorizadas que lo necesiten para
+            las funciones institucionales relacionadas con la finalidad educativa.
+            Los datos no deben utilizarse para publicidad ni para finalidades
+            incompatibles con las aquí descritas.
+          </p>
+        </section>
 
-        <h2>4. Menores de edad</h2>
-        <p>
-          SENT-IA está dirigida exclusivamente a estudiantes de bachillerato. La
-          aplicación no recopila información de menores sin el conocimiento de
-          la institución educativa. Se recomienda que los acudientes o tutores
-          legales sean informados sobre el uso de la aplicación por parte del
-          menor.
-        </p>
+        <section class="section" id="proveedores">
+          <h2>7. Almacenamiento y proveedores</h2>
+          <p>
+            La aplicación utiliza Supabase para almacenar y gestionar información
+            de la aplicación, incluidas las cuentas y los datos asociados. Las
+            fotografías de perfil se guardan en un espacio privado con acceso
+            restringido.
+          </p>
+          <p>
+            SENT-IA también utiliza un servicio de NVIDIA para el análisis mediante
+            inteligencia artificial. Los proveedores pueden procesar información
+            técnica necesaria para prestar sus servicios conforme a sus condiciones
+            y configuraciones aplicables.
+          </p>
+          <p>
+            Si se incorporan nuevos proveedores o servicios, esta política deberá
+            revisarse para reflejar los cambios relevantes en el tratamiento.
+          </p>
+        </section>
 
-        <h2>5. Inteligencia artificial</h2>
-        <p>
-          Los análisis generados por SENT-IA son producidos por un modelo de
-          lenguaje de inteligencia artificial a través de la API de NVIDIA.
-          Estos análisis tienen carácter orientativo y pedagógico. No
-          constituyen diagnósticos psicológicos ni médicos y no reemplazan la
-          atención profesional especializada.
-        </p>
+        <section class="section" id="seguridad">
+          <h2>8. Seguridad de la información</h2>
+          <p>
+            Según la información confirmada para esta política, se han revisado
+            las reglas de seguridad de acceso a la base de datos, incluidas las
+            políticas RLS de Supabase, el almacenamiento privado de fotografías
+            y el cifrado en tránsito y en reposo en los servicios utilizados.
+          </p>
+          <p>
+            Estas medidas buscan reducir el riesgo de acceso, alteración, pérdida
+            o divulgación no autorizados. Ningún sistema puede garantizar seguridad
+            absoluta; por ello, la institución debe revisar periódicamente los
+            permisos, las credenciales y las configuraciones de seguridad.
+          </p>
+        </section>
 
-        <h2>6. Almacenamiento y seguridad</h2>
-        <p>
-          Los datos se almacenan en Supabase, una plataforma con cifrado en
-          tránsito (TLS) y en reposo. El acceso a la información está protegido
-          por políticas de seguridad a nivel de fila (Row Level Security) que
-          garantizan que cada usuario solo accede a los datos que le
-          corresponden. Las fotos de perfil se almacenan en Supabase Storage con
-          acceso controlado por carpeta de usuario.
-        </p>
+        <section class="section" id="conservacion">
+          <h2>9. Conservación de los datos</h2>
+          <p>
+            Según la información suministrada, los datos se conservan durante el
+            periodo académico correspondiente y se contempla su eliminación al
+            finalizar dicho periodo.
+          </p>
+          <p>
+            La eliminación debe ejecutarse conforme al procedimiento institucional
+            aplicable y cubrir los datos asociados que corresponda eliminar en los
+            sistemas bajo control de la institución. Si alguna información debe
+            conservarse por una obligación legal aplicable, su conservación y acceso
+            deberán limitarse a lo necesario.
+          </p>
+          <div class="notice">
+            La institución debe asegurarse de que el procedimiento de eliminación
+            al cierre del periodo académico esté definido y se ejecute efectivamente,
+            incluidos los indicadores y resúmenes asociados.
+          </div>
+        </section>
 
-        <h2>7. Retención de datos</h2>
-        <p>
-          Los datos se conservan mientras el estudiante esté activo en la
-          institución educativa. Cuando un usuario es eliminado del sistema,
-          todos sus datos asociados (respuestas, indicadores, alertas y
-          observaciones) se eliminan automáticamente en cascada.
-        </p>
+        <section class="section" id="derechos">
+          <h2>10. Derechos de los titulares</h2>
+          <p>El titular de los datos, o su representante cuando corresponda, puede:</p>
+          <ul>
+            <li>Solicitar acceso a sus datos personales.</li>
+            <li>Solicitar la actualización o rectificación de datos incorrectos, incompletos o desactualizados.</li>
+            <li>Solicitar información sobre las finalidades del tratamiento y la autorización correspondiente, cuando aplique.</li>
+            <li>Presentar consultas o reclamaciones sobre el tratamiento de sus datos.</li>
+            <li>Solicitar la supresión de los datos o revocar la autorización cuando proceda legalmente y no exista una obligación que impida hacerlo.</li>
+          </ul>
+          <p>
+            Para presentar una solicitud, escribe a
+            <a href="mailto:adoppi2807@gmail.com?subject=Solicitud%20sobre%20datos%20personales%20SENT-IA">adoppi2807@gmail.com</a>.
+            Describe la solicitud e indica el correo asociado a la cuenta. No envíes
+            contraseñas ni códigos de acceso.
+          </p>
+          <p>
+            La institución informa un plazo interno de respuesta de siete (7) días.
+            Se aplicarán los plazos legales que correspondan al tipo de solicitud;
+            si el plazo legal aplicable es diferente, deberá respetarse el que
+            corresponda conforme a la normativa.
+          </p>
+        </section>
 
-        <h2>8. Derechos del usuario</h2>
-        <p>Los usuarios tienen derecho a:</p>
-        <ul>
-          <li>Solicitar acceso a su información personal.</li>
-          <li>Solicitar la corrección de datos inexactos.</li>
-          <li>Solicitar la eliminación de su cuenta y datos asociados.</li>
-          <li>Actualizar su nombre y foto de perfil desde la aplicación.</li>
-        </ul>
-        <p>
-          Para ejercer estos derechos, comuníquese con la coordinación académica
-          de la institución educativa.
-        </p>
+        <section class="section" id="eliminacion">
+          <h2>11. Eliminación de cuenta y datos asociados</h2>
+          <p>
+            El estudiante o su padre, madre, acudiente o representante legal,
+            según corresponda, puede solicitar la eliminación de la cuenta y
+            de los datos personales asociados que corresponda eliminar.
+          </p>
+          <ol>
+            <li>Envía un correo a <a href="mailto:adoppi2807@gmail.com?subject=Solicitud%20de%20eliminaci%C3%B3n%20de%20cuenta%20SENT-IA">adoppi2807@gmail.com</a> con el asunto “Solicitud de eliminación de cuenta SENT-IA”.</li>
+            <li>Indica el correo registrado en la aplicación y la información necesaria para verificar la solicitud.</li>
+            <li>La institución podrá verificar la identidad mediante el correo registrado y, cuando sea necesario, por medio de la institución educativa.</li>
+          </ol>
+          <p>
+            El plazo informado para gestionar la eliminación es de hasta
+            <strong>siete (7) días hábiles</strong>, una vez recibida una solicitud
+            completa y verificada. La confirmación se enviará por correo electrónico.
+          </p>
+          <p>
+            La solicitud comprende la cuenta y los datos asociados que corresponda
+            eliminar, incluidos, cuando aplique, respuestas, indicadores, resúmenes
+            y archivos relacionados. Si alguna información debe conservarse por
+            una obligación legal aplicable, se informará cuando corresponda.
+          </p>
+          <a href="mailto:adoppi2807@gmail.com?subject=Solicitud%20de%20eliminaci%C3%B3n%20de%20cuenta%20SENT-IA">Solicitar eliminación por correo</a>
+        </section>
 
-        <h2>9. Cookies y rastreo</h2>
-        <p>
-          SENT-IA no utiliza cookies de rastreo ni comparte datos con redes
-          publicitarias. La aplicación no contiene publicidad de ningún tipo.
-        </p>
+        <section class="section" id="cambios">
+          <h2>12. Cambios en esta política</h2>
+          <p>
+            Esta política puede actualizarse cuando cambien las funciones de SENT-IA,
+            las finalidades del tratamiento, los proveedores o las obligaciones
+            aplicables. La versión vigente estará disponible en la página donde
+            se publique esta política, con su fecha de actualización.
+          </p>
+          <p>
+            Cuando un cambio requiera una nueva autorización o una comunicación
+            específica conforme a la normativa aplicable, la institución deberá
+            realizar el procedimiento correspondiente. El uso continuado de la
+            aplicación no reemplaza una autorización cuando esta sea legalmente
+            necesaria.
+          </p>
+        </section>
 
-        <h2>10. Cambios a esta política</h2>
-        <p>
-          Esta política puede actualizarse periódicamente. Los cambios serán
-          notificados a través de la aplicación. El uso continuado de SENT-IA
-          después de cualquier modificación constituye la aceptación de la nueva
-          política.
-        </p>
-
-        <h2>11. Contacto</h2>
-        <p>
-          Para consultas relacionadas con el tratamiento de datos personales,
-          comuníquese con la coordinación académica de la Institución Educativa
-          Técnica Industrial Rafael Navia Varón, Cúcuta, Colombia.
-        </p>
-      </div>
-
-      <div class="footer">
-        SENT-IA · Bienestar emocional estudiantil<br />
-        Desarrollado por Sofía García<br />
-        Institución Educativa Técnica Industrial Rafael Navia Varón · 2026<br />
-        Cali, Colombia
+        <section class="section">
+          <h2>Contacto</h2>
+          <p>
+            Para preguntas sobre esta política o para ejercer tus derechos sobre
+            los datos personales, contacta a la Institución Educativa Técnica
+            Industrial Rafael Navia Varón, en Cali, Colombia, a través de
+            <a href="mailto:adoppi2807@gmail.com">adoppi2807@gmail.com</a>.
+          </p>
+          <p class="small">
+            Esta política describe el funcionamiento comunicado para SENT-IA.
+            La institución debe revisarla antes de publicarla y mantenerla
+            actualizada si cambian las prácticas reales de tratamiento de datos.
+          </p>
+        </section>
       </div>
     </div>
-  </body>
+
+    <footer>
+      <p>SENT-IA · Institución Educativa Técnica Industrial Rafael Navia Varón</p>
+      <p>Última actualización: 27 de octubre de 2026</p>
+    </footer>
+  </main>
+</body>
 </html>
